@@ -129,7 +129,7 @@ export default function Dashboard() {
     let detectedCountry = "Unknown"
 
     try {
-      const res = await fetch("http://127.0.0.1:8000/analyze", {
+      const res = await fetch("analise-automatica-ia-production.up.railway.app/analyze", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url }),
@@ -181,7 +181,7 @@ if (priority === "HIGH") {
   queueRef.current.push("sending email automatically...")
 
   try {
-    await fetch("http://127.0.0.1:8000/send-smart-email", {
+    await fetch("analise-automatica-ia-production.up.railway.app/send-smart-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
