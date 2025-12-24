@@ -1,17 +1,16 @@
-import "./globals.css"
-import MatrixRain from "../components/MatrixRain"
+import "./globals.css";
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export const metadata = {
+  title: "SYNTRAX",
+  description: "Automated Website Intelligence System",
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-black overflow-hidden">
-        <MatrixRain />
-        <div className="relative z-10">{children}</div>
+      <body className="bg-black text-green-400 font-mono">
+        {children}
       </body>
     </html>
-  )
+  );
 }
